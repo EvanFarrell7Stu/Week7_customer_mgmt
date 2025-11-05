@@ -16,6 +16,9 @@ public class customer_mgmt_main {
         void result=switch(UserInput){
             case 1: {
 
+
+
+
                 System.out.println("Enter Customer ID : ");
                 customerID = sc.nextLine();
                 System.out.println("Enter Customer Name : ");
