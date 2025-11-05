@@ -1,6 +1,11 @@
 
 
 public class Customer {
+    String customerID;
+    String name;
+    String email;
+    String phoneNumber;
+
     public Customer() {
         System.out.println();
         this.customerID="";
@@ -23,16 +28,16 @@ public class Customer {
         this.phoneNumber=phoneNumber;
     }
 
-    public void getName(){
+    public String getName(){
         return name;
     }
-    public void getCustomerID(){
+    public String getCustomerID(){
         return customerID;
     }
-    public void getEmail(){
+    public String getEmail(){
         return email;
     }
-    public void getPhoneNumber(){
+    public String getPhoneNumber(){
         return phoneNumber;
     }
 }

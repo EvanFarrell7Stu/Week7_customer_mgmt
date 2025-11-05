@@ -6,53 +6,65 @@ import java.util.List;
 
 public class customer_mgmt_main {
     public static void main(String[] args) {
-        List<Customer>customers=new ArrayList<Customer>();
-        Scanner sc=new Scanner(System.in);
+        List<Customer> customers = new ArrayList<Customer>();
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("=====Customer Management System======\n1) Add Customer\n2) Update Customer\n3) Display All\n4) Exit");
-        int UserInput=sc.nextInt();
-        int result=1;
-        while(result==1){
-        Customer customer = new Customer();
-        result=switch(UserInput) {
-            case 1: {
+        int UserInput = sc.nextInt();
+        int result = 1;
+        while (result == 1) {
+            Customer customer1 = new Customer();
+            result = switch (UserInput) {
+                case 1: {
 
 
-                System.out.println("Enter Customer ID : ");
-                customerID = sc.nextLine();
-                System.out.println("Enter Customer Name : ");
-                name = sc.nextLine();
-                System.out.println("Enter Customer Email : ");
-                email = sc.nextLine();
-                System.out.println("Enter Customer Phone Number : ");
-                phoneNumber = sc.nextLine();
-            }
+                    System.out.println("Enter Customer ID : ");
+                    String customerID = sc.nextLine();
+                    customer1.setCustomerID(customer1.toString());
+                    System.out.println("Enter Customer Name : ");
+                    String name = sc.nextLine();
+                    customer1.setName(name);
+                    System.out.println("Enter Customer Email : ");
+                    String email = sc.nextLine();
+                    customer1.setEmail(email);
+                    System.out.println("Enter Customer Phone Number : ");
+                    String phoneNumber = sc.nextLine();
+                    customer1.setPhoneNumber(phoneNumber);
 
-            case 2: {
-                System.out.println("Enter Customer ID : ");
-                sc.nextLine();
-                boolean Index = customers.contains(customer);
-                customers.remove();
-
-
-            }
-            case 3: {
-                System.out.println("Customer List");
-                for (Customer c : customers) {
-                    System.out.println("Customer ID" + customerID + "Name:" + name + "\nemail" + email + "\nPhone number" + phoneNumber);
+                    yield 1;
                 }
-            }
-            case 4: {
-                System.out.println("Exit");
-                yield 4;
-            }
 
+                case 2: {
+                    System.out.println("Enter Customer ID : ");
+                    String tempID=sc.next();
+                    int Index=customers.indexOf(tempID);
+                    customers.remove(Index);
+
+                    yield 1;
+
+
+                }
+                case 3: {
+                    System.out.println("Customer List");
+                    for (Customer c : customers) {
+                        System.out.println("Customer ID" + c.getCustomerID() + "Name:" + c.getName()+ "\nemail" + c.getEmail() + "\nPhone number" + c.getPhoneNumber());
+                    }
+                    yield 1;
+                }
+                case 4: {
+                    System.out.println("Exit");
+                    yield 4;
+                }
+
+                default: {
+                    System.out.println("Invalid Input");
+                    yield 1;
+                }
+
+
+            };
         }
-
-
     }
-
-
 
 
 }
