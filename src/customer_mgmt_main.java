@@ -30,7 +30,11 @@ public class customer_mgmt_main {
             }
 
             case 2: {
-            customer.remove() = new Customer();
+                System.out.println("Enter Customer ID : ");
+                sc.nextLine();
+            boolean Index=customers.contains(customer);
+            customers.remove(Index)
+
             }
             case 3: {
 
