@@ -10,9 +10,12 @@ public class customer_mgmt_main {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("=====Customer Management System======\n1) Add Customer\n2) Update Customer\n3) Display All\n4) Exit");
-        int UserInput = sc.nextInt();
+
         int result = 1;
         while (result == 1) {
+            System.out.print("\nSelect option: ");
+            int UserInput = sc.nextInt();
+            String dump=sc.nextLine();
             Customer customer1 = new Customer();
             result = switch (UserInput) {
                 case 1: {
@@ -37,8 +40,8 @@ public class customer_mgmt_main {
                 case 2: {
                     System.out.println("Enter Customer ID : ");
                     String tempID=sc.next();
-                    int Index=customers.indexOf(tempID);
-                    customers.remove(Index);
+
+
 
                     yield 1;
 
