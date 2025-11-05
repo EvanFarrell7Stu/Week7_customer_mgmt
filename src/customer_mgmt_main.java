@@ -32,7 +32,7 @@ public class customer_mgmt_main {
                 System.out.println("Enter Customer ID : ");
                 sc.nextLine();
                 boolean Index = customers.contains(customer);
-                customers.remove(Index)
+                customers.remove();
 
 
             }
