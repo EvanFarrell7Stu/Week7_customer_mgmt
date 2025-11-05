@@ -10,17 +10,19 @@ public class customer_mgmt_main {
 
     while(true){
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Customer ID : ");
+        String customerID=sc.nextLine();
         System.out.println("Enter Customer Name : ");
         String name=sc.nextLine();
         System.out.println("Enter Customer Email : ");
         String email=sc.nextLine();
-        System.out.println("Enter Customer Password : ");
-        String customerID=sc.nextLine();
-        System.out.println("Enter Customer Address : ");
+        System.out.println("Enter Customer Phone Number : ");
         String phoneNumber=sc.nextLine();
     }
 
-
+for(Customer c:customers){
+    System.out.println("Customer ID"+customerID+ "Name:"+name+"\nemail"+email+"\nPhone number"+phoneNumber);
+}
 
     }
 }
