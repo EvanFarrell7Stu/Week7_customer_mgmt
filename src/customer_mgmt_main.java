@@ -34,6 +34,7 @@ public class customer_mgmt_main {
                     String phoneNumber = sc.nextLine();
                     customer1.setPhoneNumber(phoneNumber);
 
+
                     yield 1;
                 }
 
